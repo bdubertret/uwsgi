@@ -25,8 +25,6 @@ Build-Depends:
  libxml2-dev,
  libyaml-dev,
  libzmq3-dev [!hurd-any] | libzmq-dev [!kfreebsd-any !hurd-any],
- libphp5-embed,
- php5-dev,
  libonig-dev,
  libdb-dev,
  libqdbm-dev,
@@ -243,7 +241,6 @@ Depends: ${misc:Depends},
  uwsgi-plugin-rbthreads (= ${binary:Version}),
  uwsgi-plugin-fiber (= ${binary:Version}),
  uwsgi-plugin-greenlet-python (= ${binary:Version}) [amd64 armel armhf hurd-i386 i386 kfreebsd-amd64 kfreebsd-i386 mips mipsel powerpc s390 s390x sparc],
- uwsgi-plugin-php (= ${binary:Version}),
  uwsgi-plugin-pyerl-python (= ${binary:Version}),
  uwsgi-plugin-pyerl-python3 (= ${binary:Version})
 Description: all available plugins for uWSGI
@@ -301,7 +298,6 @@ Depends: ${misc:Depends},
  uwsgi-plugin-jwsgi-openjdk-7 (= ${binary:Version}) [amd64 armel armhf i386 ia64 kfreebsd-amd64 kfreebsd-i386 powerpc s390 s390x sparc],
  uwsgi-plugin-lua5.1 (= ${binary:Version}),
  uwsgi-plugin-lua5.2 (= ${binary:Version}),
- uwsgi-plugin-php (= ${binary:Version}),
  uwsgi-plugin-psgi (= ${binary:Version}),
  uwsgi-plugin-python (= ${binary:Version}),
  uwsgi-plugin-python3 (= ${binary:Version}),
@@ -320,7 +316,6 @@ Description: plugins for integration of uWSGI and application
    * Java (OpenJDK 6 and 7)
    * JWSGI (OpenJDK 6 and 7)
    * Lua WSAPI (Lua 5.1 and 5.2)
-   * PHP
    * Perl PSGI
    * Python WSGI (Python/Python 3)
    * Rack (Ruby 1.9.1)
@@ -663,19 +658,6 @@ Description: V8 JavaScript plugin for uWSGI
  the same core.
  .
  This package provides V8 plugin for uWSGI.
-
-Package: uwsgi-plugin-php
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, uwsgi-core (= ${binary:Version}),
- ${cdbs:Depends}
-Description: PHP plugin for uWSGI
- uWSGI presents a complete stack for networked/clustered web applications,
- implementing message/object passing, caching, RPC and process management.
- It is designed to be fully modular. This means that different plugins can be
- used in order to add compatibility with tons of different technology on top of
- the same core.
- .
- This package provides PHP plugin for uWSGI.
 
 Package: uwsgi-plugin-xslt
 Architecture: any

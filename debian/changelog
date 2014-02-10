@@ -1,3 +1,16 @@
+uwsgi (1.9.17.1-5build2iscoolent2) precise; urgency=low
+
+  * Disable php plugin build rules, to allow building for precise, which
+    lacks the required libphp5-embed
+
+ -- Benoit Dubertret <benoit.dubertret@iscool-e.com>  Mon, 10 Feb 2014 09:41:44 +0000
+
+uwsgi (1.9.17.1-5build2iscoolent1) precise; urgency=low
+
+  * Backport for precise
+
+ -- Benoit Dubertret <benoit.dubertret@iscool-e.com>  Thu, 06 Feb 2014 10:30:02 +0000
+
 uwsgi (1.9.17.1-5build2) trusty; urgency=medium
 
   * Rebuild again, the previous build was still linked against old gloox
